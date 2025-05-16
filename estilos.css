@@ -1,0 +1,34 @@
+/* Estilos para el título ParceFlix */
+#ttl-pf {
+    margin-left: -50px;
+}
+
+/*Para la imagen del fondo */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1;
+}
+
+/* Estilos para cada elemento del carrusel */
+.carousel-item {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+/* Estilos para la información del carrusel */
+.fixed-info {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-75%);
+    z-index: 9.5;
+    width: 40%;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Clon de Netflix</title>
+    <link rel="stylesheet" href="../Netflix/bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="bg-black text-white">
+    <header class="bg-red py-3">
+        <div class="container">
+            <h1 class="text-danger" id="ttl-pf">ParceFlix</h1>
+        </div>
+    </header>
+    <section class="principal position-relative">
+        <div id="carrPrin" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="bg-image" style="background-image: url('Imagenes/asta.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-image" style="background-image: url('Imagenes/soloLeve.jpg');"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="bg-image" style="background-image: url('Imagenes/Demon.png');"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrPrin" data-bs-slide="prev">
+                <span class="bi bi-arrow-left-circle-fill" aria-hidden="true" style="font-size: 2rem;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrPrin" data-bs-slide="next">
+                <span class="bi bi-arrow-right-circle-fill" aria-hidden="true" style="font-size: 2rem;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="fixed-info text-white p-4">
+            <h2>Título Principal</h2>
+            <p>Descripción de la película o serie principal.</p>
+            <button class="btn btn-danger">Play</button>
+            <button class="btn btn-outline-light">Añadir a mi lista</button>
+        </div>
+    </section>
+    <div class="container mt-4">
+        <div class="row genero">
+            <h2>Ficción</h2>
+            <div class="d-flex flex-row overflow-auto gx-4">
+                <div class="col-md-3.5 miniatura me-4" data-titulo="Stranger Things"
+                    data-descripcion="Cuando un niño desaparece, su madre, un jefe de policía y sus amigos deben enfrentarse a fuerzas sobrenaturales aterradoras para recuperarlo."
+                    data-duracion="50 min">
+                    <img src="Imagenes/strange.png" alt="Serie 1" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="Dark"
+                    data-descripcion="La desaparición de dos niños en la ciudad alemana de Winden revela oscuros secretos y conexiones entre cuatro familias a lo largo de varias generaciones."
+                    data-duracion="50 min">
+                    <img src="Imagenes/dark.png " alt="Serie 1" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="You"
+                    data-descripcion="Un joven encantador pero obsesivo usa las redes sociales para acechar a mujeres y manipularlas para que se conviertan en sus novias."
+                    data-duracion="45-55 min">
+                    <img src="Imagenes/you.png" alt="Película 2" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="The Fight Club"
+                    data-descripcion=" ¿Harto de tu vida? Un oficinista insomne y un carismático fabricante de jabones fundan un club secreto donde los hombres pueden liberar su frustración a puñetazos."
+                    data-duracion="90 min">
+                    <img src="Imagenes/Breaking.png" alt="Película 2" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <div class="row genero mt-4 mb-5">
+            <h2>Animado</h2>
+            <div class="d-flex flex-row overflow-auto gx-4">
+                <div class="col-md-3.5 miniatura me-4" data-titulo="Arcane"
+                    data-descripcion="En el rico pero conflictivo mundo de Piltover y el oprimido distrito de Zaun, dos hermanas navegan a través de la violencia y la magia."
+                    data-duracion="40 min">
+                    <img src="Imagenes/arcane.png" alt="Serie 2" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="Kung Fu Panda 2"
+                    data-descripcion=" Para derrotar a Shen, Po emprende un viaje lleno de peligros y descubrimientos que lo llevará a desenterrar secretos sobre su propia historia y su misterioso origen."
+                    data-duracion="90 min">
+                    <img src="Imagenes/walking.png" alt="Serie 2" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="The Whisker Away"
+                    data-descripcion="Una niña de diez años se adentra en un mundo gobernado por dioses, brujas y espíritus, y donde los humanos se transforman en bestias."
+                    data-duracion="125 min">
+                    <img src="Imagenes/gata.png" alt="Película 3" class="img-fluid">
+                </div>
+                <div class="col-md-3.5 miniatura me-4" data-titulo="Los Croods: 3"
+                    data-descripcion="Los Croods se encuentran con otra familia, los Masiores, que afirman ser más evolucionados. Las tensiones aumentan entre las dos familias."
+                    data-duracion="95 min">
+                    <img src="Imagenes/croods.png" alt="Película 3" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="modInfo" tabindex="-1" aria-labelledby="modInfoLbl" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title" id="modInfoLbl">Detalles</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img id="modImg" src="" alt="Imagen de la película" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modTtl"></h3>
+                            <p id="modDesc"></p>
+                            <div class="d-flex align-items-center">
+                                <p class="me-3 mb-0">Duración: <span id="modDur"></span></p>
+                                <button class="btn btn-danger me-2">Play</button>
+                                <button class="btn btn-outline-light">Añadir a mi lista</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../Netflix/bootstrap-5.3.5-dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
